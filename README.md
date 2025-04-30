@@ -7,6 +7,7 @@
 ### Introductory Turtle Logo Lessons for Students
 You can get a set of introductory lessons for students to **Turtle Logo** here:
 - Lesson #1 → "Hello, World!" [YouTube](https://youtu.be/HW2zt7gOTXs) - [Arcade tutorial & restricted IDE](http://arcade.makecode.com/?lockedEditor=1#tutorial:https://github.com/Mr-Coxall/makecode-arcade-turtle-logo-lesson1)
+- Lesson #1 → "Hello, World!" [YouTube](https://youtu.be/HW2zt7gOTXs) - [Arcade tutorial & restricted IDE](http://arcade.makecode.com/?lockedEditor=1#tutorial:github:Mr-Coxall/makecode-arcade-turtle-logo-lesson1/README)
 - Lesson #2 → Moving Turtle   [YouTube](https://youtu.be/6Iy0KVbIkzs) - [Arcade tutorial & restricted IDE](http://arcade.makecode.com/?lockedEditor=1#tutorial:https://github.com/Mr-Coxall/makecode-arcade-turtle-logo-lesson2) 
 - Lesson #3 → Turning Turtle  [YouTube](https://youtu.be/lnFRWyLXDUI) - [Arcade tutorial & restricted IDE](http://arcade.makecode.com/?lockedEditor=1#tutorial:https://github.com/Mr-Coxall/makecode-arcade-turtle-logo-lesson3)
 - Lesson #4 → Pen color       [YouTube](https://youtu.be/tOWJ47YGXX0) - [Arcade tutorial & restricted IDE](http://arcade.makecode.com/?lockedEditor=1#tutorial:https://github.com/Mr-Coxall/makecode-arcade-turtle-logo-lesson4)
