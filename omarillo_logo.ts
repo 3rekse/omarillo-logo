@@ -326,7 +326,7 @@ class Omarillo {
     //% group="Sprite Commands"
     //% blockNamespace="omarillo"
     setSpeed(speed: number): void {
-        this.delay = 100 - Math.clamp(1, 100, speed | 0);
+        this.delay = 100 - Math.max(1, Math.min(100, speed | 0));
     }
 }
 

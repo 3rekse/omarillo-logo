@@ -1,27 +1,12 @@
 {
     "name": "Omarillo Logo",
     "version": "1.0.0",
-    "description": "",
+    "description": "Il linguaggio di omarillo",
     "dependencies": {
         "device": "*"
     },
     "files": [
-        "README.md",
-        "assets.json",
-        "omarillo_logo.ts",
-        "tutorial-info-cache.json",
-        "images.g.jres",
-        "images.g.ts"
+        "omarillo_logo.ts"
     ],
-    "testFiles": [
-        "test.ts"
-    ],
-    "targetVersions": {
-        "target": "1.3.49",
-        "targetId": "arcade"
-    },
-    "supportedTargets": [
-        "arcade"
-    ],
-    "preferredEditor": "tsprj"
+  "preferredEditor": "tsprj"
 }
