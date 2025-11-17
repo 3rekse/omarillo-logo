@@ -5,18 +5,18 @@
 //% weight=0 color=#b8860b icon="\uf021" block="Sprite Transforms"
 //% advanced=true
 /**
- * Logo Turtle graphics blocks
+ * Logo Omarillo graphics blocks
  * Created by: Mr. Coxall
  * Created on: Feb 2021
  * 
- *  Another implimentation of Logo Turtle
- *  - starting code taken from: https://github.com/microsoft/pxt-screen-turtle
+ *  Another implimentation of Logo Omarillo
+ *  - starting code taken from: https://github.com/microsoft/pxt-screen-omarillo
  *  - needed to have a reduced set of instructions
  */
 //% weight=100 color=#0f9c11 icon="\uf188"
 //% groups='[]'
 
-enum TurtlePenMode {
+enum OmarilloPenMode {
     //% block="down"
     Down,
     //% block="up"
@@ -25,14 +25,14 @@ enum TurtlePenMode {
     Erase
 }
 
-enum TurtleTurnDirection {
+enum OmarilloTurnDirection {
     //% block="right"
     Right,
     //% block="left"
     Left
 }
 
-enum TurtleDirection {
+enum OmarilloDirection {
     //% block="forward"
     Forward,
     //% block="backward"
@@ -40,12 +40,12 @@ enum TurtleDirection {
 }
 
 /**
- * A turtle that can move a sprite
+ * A omarillo that can move a sprite
  */
-class Turtle {
+class Omarillo {
     color: number = 1;
     direction: number = 0; // degrees -> starting direction is to the right
-    penMode: TurtlePenMode = TurtlePenMode.Down;
+    penMode: OmarilloPenMode = OmarilloPenMode.Down;
     delay = 10;
     sprite: Sprite;
     bkg: Image;
@@ -53,11 +53,11 @@ class Turtle {
     constructor(sprite: Sprite, bkg: Image) {
         this.sprite = sprite;
         this.bkg = bkg;
-        this.sprite.data[turtle.DATA_KEY] = this;
+        this.sprite.data[omarillo.DATA_KEY] = this;
     }
 
     /**
-     * Gets the horizontal coordinate of the center of the turtle
+     * Gets the horizontal coordinate of the center of the omarillo
      */
     get x() {
         return this.sprite.x;
@@ -68,7 +68,7 @@ class Turtle {
     }
 
     /**
-     * Gets the vertical coordinate of the center of the turtle
+     * Gets the vertical coordinate of the center of the omarillo
      */
     get y() {
         return this.sprite.y;
@@ -81,22 +81,22 @@ class Turtle {
     // block no longer shown to user, but might still be called by other blocks
 
     /**
-     * Moves the turtle for the given amount of pixels
+     * Moves the omarillo for the given amount of pixels
      * @param steps number of steps, eg: 1
      */
-    // blockId=turtleSpriteForward block="$this(myTurtle) forward %steps steps"
+    // blockId=omarilloSpriteForward block="$this(myOmarillo) forward %steps steps"
     //% weight=99 blockGap=8
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
+    //% blockNamespace="omarillo"
     forward(steps: number): void {
         if (!steps) return;
 
-        const drad = this.direction * turtle.DEG_TO_RAD;
+        const drad = this.direction * omarillo.DEG_TO_RAD;
         const sn = Math.sign(steps)
         const dx = Math.cos(drad) * sn
         const dy = - Math.sin(drad) * sn
         const n = Math.abs(steps);
-        const c = this.penMode == TurtlePenMode.Down ? this.color : 0;
+        const c = this.penMode == OmarilloPenMode.Down ? this.color : 0;
 
         const firstX = this.x;
         const firstY = this.y;
@@ -107,7 +107,7 @@ class Turtle {
             // animating move...
             for (let i = 0; i < n; ++i) {
                 // paint if pen down
-                if (this.penMode == TurtlePenMode.Down || this.penMode == TurtlePenMode.Erase)
+                if (this.penMode == OmarilloPenMode.Down || this.penMode == OmarilloPenMode.Erase)
                     this.bkg.drawLine(oldX, oldY, this.x, this.y, c)
                 // paint and update
                 this.setPosition(this.x + dx, this.y + dy);
@@ -122,7 +122,7 @@ class Turtle {
         // adjust final position
         this.setPosition(Math.round(firstX + dx * n), Math.round(firstY + dy * n))
         // paint if pen down
-        if (this.penMode == TurtlePenMode.Down || this.penMode == TurtlePenMode.Erase)
+        if (this.penMode == OmarilloPenMode.Down || this.penMode == OmarilloPenMode.Erase)
             this.bkg.drawLine(oldX, oldY, this.x, this.y, c)
         // and wait
         pause(this.delay);
@@ -132,21 +132,21 @@ class Turtle {
      * Moves back by the given number of steps
      * @param steps number of steps to move, eg: 1
      */
-    // blockId=turtleSpriteBack block="$this(myTurtle) back %steps steps"
+    // blockId=omarilloSpriteBack block="$this(myOmarillo) back %steps steps"
     //% weight=98 blockGap=8
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
+    //% blockNamespace="omarillo"
     back(steps: number): void {
         this.forward(-steps);
     }
 
     /**
-     * Turns the turtle
+     * Turns the omarillo
      */
-    // blockId=turtleSpriteturn block="$this(myTurtle) turn %degrees"
+    // blockId=omarilloSpriteturn block="$this(myOmarillo) turn %degrees"
     //% degrees.min=-180 degrees.max=180
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
+    //% blockNamespace="omarillo"
     turn(degrees: number): void {
         this.direction = (this.direction + degrees) % 360;
     }
@@ -154,18 +154,18 @@ class Turtle {
     // block that are shown to user
 
     /**
-     * Moves turtle object direction by the given number of steps, in the given direction.
+     * Moves omarillo object direction by the given number of steps, in the given direction.
      * @param direction to move in, eg: forwards
      * @param steps number of steps to move, eg: 25
      */
-    //% blockId=turtleSpriteMoveDirection block="$this(myTurtle) move %direction %steps steps"
+    //% blockId=omarilloSpriteMoveDirection block="$this(myOmarillo) move %direction %steps steps"
     //% steps.defl=25
     //% weight=19
     //% blockGap=8
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
-    moveDirection(direction: TurtleDirection, steps: number): void {
-        if (direction == TurtleDirection.Forward) {
+    //% blockNamespace="omarillo"
+    moveDirection(direction: OmarilloDirection, steps: number): void {
+        if (direction == OmarilloDirection.Forward) {
             this.forward(steps);
         } else {
             this.forward(-steps);
@@ -173,9 +173,9 @@ class Turtle {
     }
 
     /**
-     * Turns the turtle object direction and degrees.
+     * Turns the omarillo object direction and degrees.
      */
-    //% blockId=turtleSpriteTurnByDirectionAndDegrees block="$this(myTurtle) turn %direction by %degrees°"
+    //% blockId=omarilloSpriteTurnByDirectionAndDegrees block="$this(myOmarillo) turn %direction by %degrees°"
     //% weight=18
     //% blockGap=8
     //% direction
@@ -183,9 +183,9 @@ class Turtle {
     //% direction.defl=Right
     //% degrees.defl=90
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
-    turnDirectionByDegrees(direction: TurtleTurnDirection, degrees: number): void {
-        if (direction == TurtleTurnDirection.Left) {
+    //% blockNamespace="omarillo"
+    turnDirectionByDegrees(direction: OmarilloTurnDirection, degrees: number): void {
+        if (direction == OmarilloTurnDirection.Left) {
             this.direction = (this.direction + degrees) % 360;
             transformSprites.rotateSprite(this.sprite, (-1 * this.direction))
         } else {
@@ -202,70 +202,70 @@ class Turtle {
      */
     //% blockGap=8
     //% weight=17
-    //% blockId=turtlespritesay block="$this(myTurtle) says %text||for %millis ms"
+    //% blockId=omarillospritesay block="$this(myOmarillo) says %text||for %millis ms"
     //% text.defl="Hello, World!"
     //% timeOnScreen.defl=5000
     //% millis.shadow=timePicker
     //% text.shadow=text
     //% inlineInputMode=inline
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
+    //% blockNamespace="omarillo"
     say(text: any, timeOnScreen?: number, textColor = 15, textBoxColor = 1) {
         //this.sprite.say(text, timeOnScreen || 5000, textColor, textBoxColor);
         this.sprite.say(text, timeOnScreen, textColor, textBoxColor);
     }
 
     /**
-     * Puts the turtle's pen down or up.
+     * Puts the omarillo's pen down or up.
      */
     //% blockGap=8
-    //% blockId=turtleSpritePen block="$this(myTurtle) pen %mode"
-    //% mode.defl=TurtlePenMode.Up
+    //% blockId=omarilloSpritePen block="$this(myOmarillo) pen %mode"
+    //% mode.defl=OmarilloPenMode.Up
     //% weight=16
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
-    pen(mode: TurtlePenMode): void {
+    //% blockNamespace="omarillo"
+    pen(mode: OmarilloPenMode): void {
         this.penMode = mode;
     }
 
     /**
-     * Sets the turtle's pen color.
+     * Sets the omarillo's pen color.
      */
     //% blockGap=8
-    //% blockId=turtlespritesetpencolor block="$this(myTurtle) set pen color to %color=colorindexpicker"
+    //% blockId=omarillospritesetpencolor block="$this(myOmarillo) set pen color to %color=colorindexpicker"
     //% color.defl=1
     //% weight=15
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
+    //% blockNamespace="omarillo"
     setPenColor(color: number) {
         this.color = color & 0xf;
     }
 
     /**
-     * Moves the turtle to the center of the screen.
+     * Moves the omarillo to the center of the screen.
      */
     //% blockGap=8
-    //% blockId=turtleSpriteHome block="$this(myTurtle) home"
+    //% blockId=omarilloSpriteHome block="$this(myOmarillo) home"
     //% weight=13
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
+    //% blockNamespace="omarillo"
     home(): void {
         this.setPosition(80, 60);
         this.direction = 0;
-        this.turnDirectionByDegrees(TurtleTurnDirection.Right, 0)
+        this.turnDirectionByDegrees(OmarilloTurnDirection.Right, 0)
     }
 
     /**
-     * Sets the turtle position.
+     * Sets the omarillo position.
      * @param x the horizontal position from 0 (left) to 160 (right), eg: 2
      * @param y the vertical position from 0 (top) to 120 (bottom), eg: 2
      */
     //% x.min=0 x.max=160
     //% y.min=0 y.max=120
-    // blockId=turtleSpriteSetPosition block="$this(myTurtle) set position x %x y %y"
+    // blockId=omarilloSpriteSetPosition block="$this(myOmarillo) set position x %x y %y"
     //% weight=12
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
+    //% blockNamespace="omarillo"
     setPosition(x: number, y: number): void {
         this.x = x % screen.width; 
         if (this.x < 0) 
@@ -276,16 +276,16 @@ class Turtle {
     }
 
     /**
-     * Sets the turtle position, to cartesian coordinates. 
+     * Sets the omarillo position, to cartesian coordinates. 
      * @param x the horizontal position from -80 (left) to 80 (right), eg: 0
      * @param y the vertical position from -60 (top) to 60 (bottom), eg: 0
      */
     //% x.min=-80 x.max=80
     //% y.min=-60 y.max=60
-    //% blockId=turtleSpriteSetPositionCartesian block="$this(myTurtle) set position x %x y %y"
+    //% blockId=omarilloSpriteSetPositionCartesian block="$this(myOmarillo) set position x %x y %y"
     //% weight=12
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
+    //% blockNamespace="omarillo"
     setPositionCartesian(x: number, y: number): void {
         x = x + 80
         y = 60 - y
@@ -302,14 +302,14 @@ class Turtle {
     }
 
     /**
-     * Stamps the image at the current turtle's position.
+     * Stamps the image at the current omarillo's position.
      * @param image 
      */
     //% blockGap=8
-    //% _blockId=turtlespritestamp block="$this(myTurtle) stamp %image=screen_image_picker"
+    //% _blockId=omarillospritestamp block="$this(myOmarillo) stamp %image=screen_image_picker"
      //% weight=11
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
+    //% blockNamespace="omarillo"
     stamp(image: Image) {
         this.bkg.drawImage(image, this.sprite.left + ((this.sprite.width - image.width) >> 1), this.sprite.top + ((this.sprite.height - image.height) >> 1));
         pause(this.delay);
@@ -320,42 +320,42 @@ class Turtle {
      * @param speed eg: 50
      */
     //% blockGap=8
-    //% blockId=turtleSpriteSetSpeed block="$this(myTurtle) set speed %speed"
+    //% blockId=omarilloSpriteSetSpeed block="$this(myOmarillo) set speed %speed"
     //% speed.min=1 speed.max=100
     //% weight=10
     //% group="Sprite Commands"
-    //% blockNamespace="turtle"
+    //% blockNamespace="omarillo"
     setSpeed(speed: number): void {
         this.delay = 100 - Math.clamp(1, 100, speed | 0);
     }
 }
 
 /**
- * Turtle graphics blocks
+ * Omarillo graphics blocks
  */
 //% weight=100 color=#0f9c11 icon="\uf188"
-//% groups='["Turtle Commands", "Sprite Commands"]'
-namespace turtle {
-    export const DATA_KEY = "turtle"
+//% groups='["Omarillo Commands", "Sprite Commands"]'
+namespace omarillo {
+    export const DATA_KEY = "omarillo"
     export const DEG_TO_RAD =  Math.PI / 180;
 
-    export let turtleImage = img`
+    export let omarilloImage = img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
-    . . . . . . e e . . . . . . . . 
-    . . . . . e e e e . . 7 7 7 . . 
-    . . . . e e e d e e . 7 7 f 7 . 
-    . . . e e e e e d e e 7 7 7 7 . 
-    . . . e e d e e e e e 7 7 7 . . 
-    . . 7 e e e e e e e e . . . . . 
-    . 7 . 7 7 7 7 7 7 7 7 . . . . . 
-    . . . 7 7 7 7 7 7 7 7 . . . . . 
-    . . 7 7 7 . . . . 7 7 7 . . . . 
-    . . 7 7 7 . . . . 7 7 7 . . . . 
+    . . . . . 8 8 8 . . . . . . . . 
+    . . . . 8 8 8 8 8 . . . . . . . 
+    . . 8 8 8 8 8 8 8 8 8 . . . . . 
+    . 8 8 8 8 6 6 6 8 8 8 8 . . . . 
+    . 8 8 6 6 6 6 6 6 6 8 8 8 8 8 8 
+    . 8 8 8 6 6 6 6 6 6 6 6 6 6 6 8 
+    . 8 8 8 8 6 6 6 8 8 8 8 8 8 8 8 
+    . . 8 8 8 8 8 8 8 8 8 . . . . . 
+    . . . . 8 8 8 8 8 . . . . . . . 
+    . . . . . 8 8 8 . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . .        
+    . . . . . . . . . . . . . . . .       
     `;        
     export let backgroundColor = 0xf;
 
@@ -363,15 +363,15 @@ namespace turtle {
     function bkg() {
         if (!_bkg) {
             _bkg = scene.backgroundImage();
-            _bkg.fill(turtle.backgroundColor);
+            _bkg.fill(omarillo.backgroundColor);
         }
         return _bkg;
     }
 
-    let _turtle: Turtle;
+    let _omarillo: Omarillo;
     function init() {
-        if (!_turtle) {
-            _turtle = fromSprite(sprites.create(turtle.turtleImage.clone()))
+        if (!_omarillo) {
+            _omarillo = fromSprite(sprites.create(omarillo.omarilloImage.clone()))
             home()
         }
     }
@@ -379,120 +379,120 @@ namespace turtle {
     // blocks no longer used but might be called by exported blocks
 
     /**
-     * Moves the turtle for the given amount of pixels
+     * Moves the omarillo for the given amount of pixels
      * @param steps number of steps, eg: 1
      */
-    // blockId=turtleForward block="forward %steps steps"
+    // blockId=omarilloForward block="forward %steps steps"
     //% weight=99 blockGap=8
-    //% group="Turtle Commands"
+    //% group="Omarillo Commands"
     export function forward(steps: number): void {
         init();
-        _turtle.forward(steps);
+        _omarillo.forward(steps);
     }
 
     /**
      * Moves back by the given number of steps
      * @param steps number of steps to move, eg: 1
      */
-    // blockId=turtleBack block="back %steps steps"
+    // blockId=omarilloBack block="back %steps steps"
     //% weight=98 blockGap=8
-    //% group="Turtle Commands"
+    //% group="Omarillo Commands"
     export function back(steps: number): void {
         forward(-steps);
     }
 
     /**
-     * Turns the turtle
+     * Turns the omarillo
      */
-    // blockId=turtleturn block="turn %degrees"
+    // blockId=omarilloturn block="turn %degrees"
     //% degrees.min=-180 degrees.max=180
-    //% group="Turtle Commands"
+    //% group="Omarillo Commands"
     export function turn(degrees: number): void {
         init();
-        _turtle.turn(degrees);
+        _omarillo.turn(degrees);
     }
 
-    // blockId=turtlerightturn block="turn right %degrees"
-    //% group="Turtle Commands"
+    // blockId=omarillorightturn block="turn right %degrees"
+    //% group="Omarillo Commands"
     export function rt(degrees : number): void{
         turn(-degrees)
     }
 
-    // blockId=turtleleftturn block="turn left %degrees"
-    //% group="Turtle Commands"
+    // blockId=omarilloleftturn block="turn left %degrees"
+    //% group="Omarillo Commands"
     export function lt(degrees : number): void{
         turn(degrees)
     }
 
     /**
-     * Sets the turtle position
+     * Sets the omarillo position
      * @param x the horizontal position from 0 (left) to 160 (right), eg: 2
      * @param y the vertical position from 0 (top) to 120 (bottom), eg: 2
      */
     //% x.min=0 x.max=160
     //% y.min=0 y.max=120
-    // blockId=turtleSetPosition block="set position x %x y %y"
+    // blockId=omarilloSetPosition block="set position x %x y %y"
     //% weight=87
-    //% group="Turtle Commands"
+    //% group="Omarillo Commands"
     export function setPosition(x: number, y: number): void {
         init();
-        _turtle.setPosition(x, y)
+        _omarillo.setPosition(x, y)
     }
 
     // blocks visible to user
 
     /**
-     * Show the turtle, if not already on the screen.
+     * Show the omarillo, if not already on the screen.
      */
-    //% blockId=showTurtle block="show turtle"
+    //% blockId=showOmarillo block="show omarillo"
     //% sprite.shadow=spritescreate
     //% weight=50 
     //% blockGap=8
-    //% group="Turtle Commands"
-    export function showTurtle(): void {
+    //% group="Omarillo Commands"
+    export function showOmarillo(): void {
         init();
     }
 
     /**
-     * Moves turtle by the given number of steps, in the given direction.
+     * Moves omarillo by the given number of steps, in the given direction.
      * @param direction to move in, eg: forwards
      * @param steps number of steps to move, eg: 25
      */
-    //% blockId=turtleMoveDirection block="move turtle %direction %steps steps"
+    //% blockId=omarilloMoveDirection block="move omarillo %direction %steps steps"
     //% steps.defl=25
     //% weight=49
     //% blockGap=8
-    //% group="Turtle Commands"
-    //% blockNamespace="turtle"
-    export function moveTurtleDirection(direction: TurtleDirection, steps: number): void {
+    //% group="Omarillo Commands"
+    //% blockNamespace="omarillo"
+    export function moveOmarilloDirection(direction: OmarilloDirection, steps: number): void {
         init();
-        if (direction == TurtleDirection.Forward) {
-            _turtle.forward(steps);
+        if (direction == OmarilloDirection.Forward) {
+            _omarillo.forward(steps);
         } else {
-            _turtle.forward(-steps);
+            _omarillo.forward(-steps);
         }
     }
 
     /**
-     * Turns the turtle right or left by the given degrees.
+     * Turns the omarillo right or left by the given degrees.
      */
-    //% blockId=turtleTurnByDirectionAndDegrees block="turn turtle %direction by %degrees°"
+    //% blockId=omarilloTurnByDirectionAndDegrees block="turn omarillo %direction by %degrees°"
     //% weight=48
     //% blockGap=8
     //% direction
     //% degrees.min=0 degrees.max=360
     //% direction.defl=Right
     //% degrees.defl=90
-    //% group="Turtle Commands"
-    //% blockNamespace="turtle"
-    export function turnTurtleDirectionByDegrees(direction: TurtleTurnDirection, degrees: number): void {
+    //% group="Omarillo Commands"
+    //% blockNamespace="omarillo"
+    export function turnOmarilloDirectionByDegrees(direction: OmarilloTurnDirection, degrees: number): void {
         init();
-        if (direction == TurtleTurnDirection.Left) {
-            _turtle.turn(degrees);
+        if (direction == OmarilloTurnDirection.Left) {
+            _omarillo.turn(degrees);
         } else {
-            _turtle.turn(-degrees);
+            _omarillo.turn(-degrees);
         }
-        transformSprites.rotateSprite(_turtle.sprite, (-1 * _turtle.direction))
+        transformSprites.rotateSprite(_omarillo.sprite, (-1 * _omarillo.direction))
     }
 
     /**
@@ -501,79 +501,79 @@ namespace turtle {
      * @param time time to keep text on
      */
     //% weight=47
-    //% blockId=turtlesay block="turtle says %text||for %millis ms"
+    //% blockId=omarillosay block="omarillo says %text||for %millis ms"
     //% text.defl="Hello, World!"
     //% timeOnScreen.defl=5000
     //% millis.shadow=timePicker
     //% text.shadow=text
     //% inlineInputMode=inline
-    //% group="Turtle Commands"
-    //% blockNamespace="turtle"
+    //% group="Omarillo Commands"
+    //% blockNamespace="omarillo"
     export function say(text: any, timeOnScreen?: number, textColor = 15, textBoxColor = 1) {
         init()
-        _turtle.say(text, timeOnScreen, textColor, textBoxColor)
+        _omarillo.say(text, timeOnScreen, textColor, textBoxColor)
     }
 
     /**
-     * Puts the turtle's pen down, up or as an eraser.
+     * Puts the omarillo's pen down, up or as an eraser.
      */
     //% blockGap=8
-    //% blockId=turtlePen block="set turtle's pen %mode"
-    //% mode.defl=TurtlePenMode.Up
+    //% blockId=omarilloPen block="set omarillo's pen %mode"
+    //% mode.defl=OmarilloPenMode.Up
     //% weight=46
-    //% group="Turtle Commands"
-    export function pen(mode: TurtlePenMode): void {
+    //% group="Omarillo Commands"
+    export function pen(mode: OmarilloPenMode): void {
         init();
-        _turtle.pen(mode)
+        _omarillo.pen(mode)
     }
 
     /**
-     * Sets the turtle's pen color.
+     * Sets the omarillo's pen color.
      */
     //% blockGap=8
-    //% blockId=turtlesetpencolor block="set turtle's pen color to %color=colorindexpicker"
+    //% blockId=omarillosetpencolor block="set omarillo's pen color to %color=colorindexpicker"
     //% weight=45
     //% color.defl=1
-    //% group="Turtle Commands"
+    //% group="Omarillo Commands"
     export function setPenColor(color: number) {
         init();
-        _turtle.setPenColor(color)
+        _omarillo.setPenColor(color)
     }
 
     /**
-     * Clears the drawings created by the turtle.
+     * Clears the drawings created by the omarillo.
      */
-    //% _blockId=turtleClearScreen block="erase turtle's trail"
+    //% _blockId=omarilloClearScreen block="erase omarillo's trail"
     //% weight=44
-    //% group="Turtle Commands"
+    //% group="Omarillo Commands"
     export function clearScreen() {
         init()
-        _bkg.fill(turtle.backgroundColor);
+        _bkg.fill(omarillo.backgroundColor);
         //home()
     }
 
     /**
-     * Moves the turtle to the center of the screen.
+     * Moves the omarillo to the center of the screen.
      */
     //% blockGap=8
-    //% blockId=turtleHome block="move turtle home"
+    //% blockId=omarilloHome block="move omarillo home"
     //% weight=43
-    //% group="Turtle Commands"
+    //% group="Omarillo Commands"
     export function home(): void {
         init()
-        _turtle.home()
+        _omarillo.home()
     }
 
     /**
-     * Sets the turtle's position, to the given cartesian coordinates.
+     * Sets the omarillo's position, to the given cartesian coordinates.
      * @param x the horizontal position from -80 (left) to 80 (right), eg: 0
      * @param y the vertical position from -60 (top) to 60 (bottom), eg: 0
      */
     //% x.min=-80 x.max=80
     //% y.min=-60 y.max=60
-    //% blockId=turtleSetPositionCartesian block="set turtle's position to (x %x, y %y)"
+    //% blockId=omarilloSetPositionCartesian block="set omarillo's position to (x %x, y %y)"
     //% weight=42
-    //% group="Turtle Commands"
+    //% group="Omarillo Commands"
     export function setPositionCartesian(x: number, y: number): void {
         init();
         x = x + 80
@@ -587,48 +587,48 @@ namespace turtle {
             x = 159
         }
 
-        _turtle.setPosition(x, y)
+        _omarillo.setPosition(x, y)
     }
 
     /**
-     * Stamps the image selected, at the current turtle's position.
+     * Stamps the image selected, at the current omarillo's position.
      * @param image 
      */
-    //% _blockId=turtlestamp block="stamp %image=screen_image_picker"
+    //% _blockId=omarillostamp block="stamp %image=screen_image_picker"
     //% weight=41
-    //% group="Turtle Commands"
+    //% group="Omarillo Commands"
     export function stamp(image: Image) {
         init();      
-        _turtle.stamp(image)
+        _omarillo.stamp(image)
     }
 
     /**
-     * Set the turtle's speed while moving.
+     * Set the omarillo's speed while moving.
      * @param speed eg: 50
      */
     //% blockGap=8
-    //% blockId=turtleSetSpeed block="set turtle's speed %speed"
+    //% blockId=omarilloSetSpeed block="set omarillo's speed %speed"
     //% speed.min=1 speed.max=100
     //% weight=40
-    //% group="Turtle Commands"
+    //% group="Omarillo Commands"
     export function setSpeed(speed: number): void {
         init();
-        _turtle.setSpeed(speed)
+        _omarillo.setSpeed(speed)
     }
 
     /**
-     * Creates a turtle object, that moves the given sprite
+     * Creates a omarillo object, that moves the given sprite
      */
-    //% blockId=turtleFromSprite block="a Turtle Object with $sprite=variables_get"
+    //% blockId=omarilloFromSprite block="a Omarillo Object with $sprite=variables_get"
     //% sprite.shadow=spritescreate
-    //% blockSetVariable=myTurtle
+    //% blockSetVariable=myOmarillo
     //% group="Sprite Commands"
     //% weight=25
-    export function fromSprite(sprite: Sprite): Turtle {
-        let turtle: Turtle = sprite.data[DATA_KEY];
-        if (!turtle)
-            turtle = new Turtle(sprite, bkg())
-        return turtle;
+    export function fromSprite(sprite: Sprite): Omarillo {
+        let omarillo: Omarillo = sprite.data[DATA_KEY];
+        if (!omarillo)
+            omarillo = new Omarillo(sprite, bkg())
+        return omarillo;
     }
 }
 

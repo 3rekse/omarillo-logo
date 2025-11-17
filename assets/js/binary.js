@@ -1,4 +1,4 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.3.49/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"1.0.0","target":"arcade","targetVersion":"1.3.49","repo":"mr-coxall/turtle-logo"}
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.3.49/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"1.0.0","target":"arcade","targetVersion":"1.3.49","repo":"mr-coxall/omarillo-logo"}
 // total=1224682 new=12.44% cached=82.13% other=5.43%
 (function (ectx) {
 'use strict';
@@ -27,7 +27,7 @@ const __this = runtime;
 const pxtrt = pxsim.pxtrt;
 let yieldSteps = 1;
 ectx.setupYield(function() { yieldSteps = 100; })
-pxsim.setTitle("Turtle Logo");
+pxsim.setTitle("Omarillo Logo");
 pxsim.setConfigData({
  "37": 160,
  "38": 120
@@ -765,9 +765,9 @@ switch (step) {
     s.callLocIdx = 59; s.pc = 34; return s.tmp_0;
   case 34:
     r0 = s.retval;
-    globals.DATA_KEY___3593 = ("turtle");
+    globals.DATA_KEY___3593 = ("omarillo");
     r0 = pxsim.image.ofBuffer(_hex6042);
-    globals.turtleImage___3595 = (r0);
+    globals.omarilloImage___3595 = (r0);
     globals.backgroundColor___3596 = (15);
     r0 = pxsim_Array__mk();
     globals._spritesWithRotations___6206 = (r0);
@@ -783,17 +783,17 @@ switch (step) {
     s.callLocIdx = 194; s.pc = 36; return s.tmp_0;
   case 36:
     r0 = s.retval;
-    s.tmp_0 = turtle_showTurtle__P3603_mk(s);
+    s.tmp_0 = omarillo_showOmarillo__P3603_mk(s);
     s.callLocIdx = 195; s.pc = 37; return s.tmp_0;
   case 37:
     r0 = s.retval;
-    s.tmp_0 = turtle_setPositionCartesian__P3611_mk(s);
+    s.tmp_0 = omarillo_setPositionCartesian__P3611_mk(s);
     s.tmp_0.arg0 = -40;
     s.tmp_0.arg1 = 20;
     s.callLocIdx = 196; s.pc = 38; return s.tmp_0;
   case 38:
     r0 = s.retval;
-    s.tmp_0 = turtle_setSpeed__P3613_mk(s);
+    s.tmp_0 = omarillo_setSpeed__P3613_mk(s);
     s.tmp_0.arg0 = 98;
     s.callLocIdx = 197; s.pc = 39; return s.tmp_0;
   case 39:
@@ -804,13 +804,13 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
-    s.tmp_1 = turtle_moveTurtleDirection__P3604_mk(s);
+    s.tmp_1 = omarillo_moveOmarilloDirection__P3604_mk(s);
     s.tmp_1.arg0 = 0;
     s.tmp_1.arg1 = 75;
     s.callLocIdx = 198; s.pc = 40; return s.tmp_1;
   case 40:
     r0 = s.retval;
-    s.tmp_0 = turtle_turnTurtleDirectionByDegrees__P3605_mk(s);
+    s.tmp_0 = omarillo_turnOmarilloDirectionByDegrees__P3605_mk(s);
     s.tmp_0.arg0 = 0;
     s.tmp_0.arg1 = 130;
     s.callLocIdx = 199; s.pc = 41; return s.tmp_0;
@@ -1441,7 +1441,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_pxtcore.switch_eq("image1", s.tmp_0);
     if (r0) { step = 1; continue; }
-    r0 = pxsim_pxtcore.switch_eq("turtleImage", s.tmp_0);
+    r0 = pxsim_pxtcore.switch_eq("omarilloImage", s.tmp_0);
     if (r0) { step = 2; continue; }
     r0 = s.tmp_0;
     { step = 3; continue; }
@@ -1510,7 +1510,7 @@ function inline__P7335_mk(s) {
 
 
 
-function turtle_turnTurtleDirectionByDegrees__P3605(s) {
+function omarillo_turnOmarilloDirectionByDegrees__P3605(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1525,7 +1525,7 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = turtle_init__P6057_mk(s);
+    s.tmp_0 = omarillo_init__P6057_mk(s);
     s.callLocIdx = 104; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
@@ -1533,16 +1533,16 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_1 = Turtle_turn__P3581_mk(s);
-    s.tmp_1.arg0 = globals._turtle___6056;
+    s.tmp_1 = Omarillo_turn__P3581_mk(s);
+    s.tmp_1.arg0 = globals._omarillo___6056;
     s.tmp_1.arg1 = s.arg1;
     s.callLocIdx = 105; s.pc = 4; return s.tmp_1;
   case 4:
     r0 = s.retval;
     { step = 2; continue; }
   case 1:
-    s.tmp_0 = Turtle_turn__P3581_mk(s);
-    s.tmp_0.arg0 = globals._turtle___6056;
+    s.tmp_0 = Omarillo_turn__P3581_mk(s);
+    s.tmp_0.arg0 = globals._omarillo___6056;
     r0 = (0 - s.arg1);
     s.tmp_0.arg1 = r0;
     s.callLocIdx = 106; s.pc = 5; return s.tmp_0;
@@ -1550,9 +1550,9 @@ switch (step) {
     r0 = s.retval;
   case 2:
     s.tmp_0 = transformSprites_rotateSprite__P3618_mk(s);
-    r0 = globals._turtle___6056.fields["sprite"];
+    r0 = globals._omarillo___6056.fields["sprite"];
     s.tmp_0.arg0 = r0;
-    r0 = globals._turtle___6056.fields["direction"];
+    r0 = globals._omarillo___6056.fields["direction"];
     s.tmp_1 = r0;
     r0 = (-1 * s.tmp_1);
     s.tmp_0.arg1 = r0;
@@ -1563,12 +1563,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-turtle_turnTurtleDirectionByDegrees__P3605.info = {"start":14160,"length":354,"line":487,"column":4,"endLine":495,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"turnTurtleDirectionByDegrees","argumentNames":["direction","degrees"]}
+omarillo_turnOmarilloDirectionByDegrees__P3605.info = {"start":14160,"length":354,"line":487,"column":4,"endLine":495,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"turnOmarilloDirectionByDegrees","argumentNames":["direction","degrees"]}
 
-function turtle_turnTurtleDirectionByDegrees__P3605_mk(s) {
+function omarillo_turnOmarilloDirectionByDegrees__P3605_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: turtle_turnTurtleDirectionByDegrees__P3605, depth: s.depth + 1,
+        parent: s, fn: omarillo_turnOmarilloDirectionByDegrees__P3605, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1647,7 +1647,7 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-transformSprites_rotateSprite__P3618.info = {"start":24213,"length":395,"line":816,"column":4,"endLine":823,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"rotateSprite","argumentNames":["sprite","angle"]}
+transformSprites_rotateSprite__P3618.info = {"start":24213,"length":395,"line":816,"column":4,"endLine":823,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"rotateSprite","argumentNames":["sprite","angle"]}
 
 function transformSprites_rotateSprite__P3618_mk(s) {
     checkStack(s.depth);
@@ -2106,7 +2106,7 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-transformSprites_rotate__P6353.info = {"start":24964,"length":3278,"line":832,"column":4,"endLine":904,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"rotate","argumentNames":["sprite","angle"]}
+transformSprites_rotate__P6353.info = {"start":24964,"length":3278,"line":832,"column":4,"endLine":904,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"rotate","argumentNames":["sprite","angle"]}
 
 function transformSprites_rotate__P6353_mk(s) {
     checkStack(s.depth);
@@ -2169,7 +2169,7 @@ switch (step) {
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-transformSprites_SpriteWithRotation_scaledImage__P6213.info = {"start":20573,"length":74,"line":701,"column":8,"endLine":703,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"scaledImage","argumentNames":["this"]}
+transformSprites_SpriteWithRotation_scaledImage__P6213.info = {"start":20573,"length":74,"line":701,"column":8,"endLine":703,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"scaledImage","argumentNames":["this"]}
 transformSprites_SpriteWithRotation_scaledImage__P6213.isGetter = true;
 
 function transformSprites_SpriteWithRotation_scaledImage__P6213_mk(s) {
@@ -2204,7 +2204,7 @@ switch (step) {
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-transformSprites_Vector_direction__P6279.info = {"start":22226,"length":64,"line":762,"column":8,"endLine":764,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"direction","argumentNames":["this"]}
+transformSprites_Vector_direction__P6279.info = {"start":22226,"length":64,"line":762,"column":8,"endLine":764,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"direction","argumentNames":["this"]}
 transformSprites_Vector_direction__P6279.isGetter = true;
 
 function transformSprites_Vector_direction__P6279_mk(s) {
@@ -2239,7 +2239,7 @@ switch (step) {
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-transformSprites_Vector_magnitude__P6280.info = {"start":22454,"length":64,"line":770,"column":8,"endLine":772,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"magnitude","argumentNames":["this"]}
+transformSprites_Vector_magnitude__P6280.info = {"start":22454,"length":64,"line":770,"column":8,"endLine":772,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"magnitude","argumentNames":["this"]}
 transformSprites_Vector_magnitude__P6280.isGetter = true;
 
 function transformSprites_Vector_magnitude__P6280_mk(s) {
@@ -2274,7 +2274,7 @@ switch (step) {
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-transformSprites_Coordinate_y__P6259.info = {"start":21487,"length":54,"line":735,"column":8,"endLine":737,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"y","argumentNames":["this"]}
+transformSprites_Coordinate_y__P6259.info = {"start":21487,"length":54,"line":735,"column":8,"endLine":737,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"y","argumentNames":["this"]}
 transformSprites_Coordinate_y__P6259.isGetter = true;
 
 function transformSprites_Coordinate_y__P6259_mk(s) {
@@ -2309,7 +2309,7 @@ switch (step) {
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-transformSprites_Coordinate_x__P6258.info = {"start":21290,"length":54,"line":727,"column":8,"endLine":729,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"x","argumentNames":["this"]}
+transformSprites_Coordinate_x__P6258.info = {"start":21290,"length":54,"line":727,"column":8,"endLine":729,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"x","argumentNames":["this"]}
 transformSprites_Coordinate_x__P6258.isGetter = true;
 
 function transformSprites_Coordinate_x__P6258_mk(s) {
@@ -2348,7 +2348,7 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-transformSprites_Vector_constructor__P6281.info = {"start":21933,"length":131,"line":753,"column":8,"endLine":756,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"inline","argumentNames":["this","magnitude","direction"]}
+transformSprites_Vector_constructor__P6281.info = {"start":21933,"length":131,"line":753,"column":8,"endLine":756,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"inline","argumentNames":["this","magnitude","direction"]}
 
 function transformSprites_Vector_constructor__P6281_mk(s) {
     checkStack(s.depth);
@@ -2388,7 +2388,7 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-transformSprites_Coordinate_constructor__P6260.info = {"start":21046,"length":95,"line":718,"column":8,"endLine":721,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"inline","argumentNames":["this","x","y"]}
+transformSprites_Coordinate_constructor__P6260.info = {"start":21046,"length":95,"line":718,"column":8,"endLine":721,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"inline","argumentNames":["this","x","y"]}
 
 function transformSprites_Coordinate_constructor__P6260_mk(s) {
     checkStack(s.depth);
@@ -2424,7 +2424,7 @@ switch (step) {
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-transformSprites_SpriteWithRotation_image__P6210.info = {"start":19845,"length":66,"line":677,"column":8,"endLine":679,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"image","argumentNames":["this"]}
+transformSprites_SpriteWithRotation_image__P6210.info = {"start":19845,"length":66,"line":677,"column":8,"endLine":679,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"image","argumentNames":["this"]}
 transformSprites_SpriteWithRotation_image__P6210.isGetter = true;
 
 function transformSprites_SpriteWithRotation_image__P6210_mk(s) {
@@ -3134,7 +3134,7 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-transformSprites_SpriteWithRotation_rotation__P6212.info = {"start":20343,"length":79,"line":693,"column":8,"endLine":695,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"rotation","argumentNames":["this","angle"]}
+transformSprites_SpriteWithRotation_rotation__P6212.info = {"start":20343,"length":79,"line":693,"column":8,"endLine":695,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"rotation","argumentNames":["this","angle"]}
 
 function transformSprites_SpriteWithRotation_rotation__P6212_mk(s) {
     checkStack(s.depth);
@@ -3169,7 +3169,7 @@ switch (step) {
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-transformSprites_SpriteWithRotation_rotation__P6211.info = {"start":20085,"length":73,"line":685,"column":8,"endLine":687,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"rotation","argumentNames":["this"]}
+transformSprites_SpriteWithRotation_rotation__P6211.info = {"start":20085,"length":73,"line":685,"column":8,"endLine":687,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"rotation","argumentNames":["this"]}
 transformSprites_SpriteWithRotation_rotation__P6211.isGetter = true;
 
 function transformSprites_SpriteWithRotation_rotation__P6211_mk(s) {
@@ -3225,7 +3225,7 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-transformSprites_SpriteWithRotation_constructor__P6214.info = {"start":19234,"length":245,"line":658,"column":8,"endLine":663,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"inline","argumentNames":["this","sprite","angle"]}
+transformSprites_SpriteWithRotation_constructor__P6214.info = {"start":19234,"length":245,"line":658,"column":8,"endLine":663,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"inline","argumentNames":["this","sprite","angle"]}
 
 function transformSprites_SpriteWithRotation_constructor__P6214_mk(s) {
     checkStack(s.depth);
@@ -3534,7 +3534,7 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-transformSprites_scale2x__P3619.info = {"start":28515,"length":2247,"line":913,"column":4,"endLine":962,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"scale2x","argumentNames":["original"]}
+transformSprites_scale2x__P3619.info = {"start":28515,"length":2247,"line":913,"column":4,"endLine":962,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"scale2x","argumentNames":["original"]}
 
 function transformSprites_scale2x__P3619_mk(s) {
     checkStack(s.depth);
@@ -3566,7 +3566,7 @@ function transformSprites_scale2x__P3619_mk(s) {
 
 
 
-function Turtle_turn__P3581(s) {
+function Omarillo_turn__P3581(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3582,7 +3582,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Turtle__C3567_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Omarillo__C3567_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     r0 = s.arg0.fields["direction"];
     s.tmp_3 = r0;
@@ -3595,12 +3595,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Turtle_turn__P3581.info = {"start":3947,"length":94,"line":149,"column":4,"endLine":151,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"turn","argumentNames":["this","degrees"]}
+Omarillo_turn__P3581.info = {"start":3947,"length":94,"line":149,"column":4,"endLine":151,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"turn","argumentNames":["this","degrees"]}
 
-function Turtle_turn__P3581_mk(s) {
+function Omarillo_turn__P3581_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Turtle_turn__P3581, depth: s.depth + 1,
+        parent: s, fn: Omarillo_turn__P3581, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3614,7 +3614,7 @@ function Turtle_turn__P3581_mk(s) {
 
 
 
-function turtle_init__P6057(s) {
+function omarillo_init__P6057(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3624,15 +3624,15 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = pxsim_numops_toBoolDecr(globals._turtle___6056);
+    r0 = pxsim_numops_toBoolDecr(globals._omarillo___6056);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_2 = turtle_fromSprite__P3614_mk(s);
+    s.tmp_2 = omarillo_fromSprite__P3614_mk(s);
     s.tmp_3 = sprites_create__P1987_mk(s);
-    r0 = pxsim_ImageMethods.clone(globals.turtleImage___3595);
+    r0 = pxsim_ImageMethods.clone(globals.omarilloImage___3595);
     s.tmp_3.arg0 = r0;
     s.tmp_3.arg1 = undefined;
     s.callLocIdx = 97; s.pc = 4; return s.tmp_3;
@@ -3642,8 +3642,8 @@ switch (step) {
     s.callLocIdx = 98; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
-    globals._turtle___6056 = (r0);
-    s.tmp_0 = turtle_home__P3610_mk(s);
+    globals._omarillo___6056 = (r0);
+    s.tmp_0 = omarillo_home__P3610_mk(s);
     s.callLocIdx = 99; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
@@ -3653,12 +3653,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-turtle_init__P6057.info = {"start":10847,"length":153,"line":371,"column":4,"endLine":376,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"init","argumentNames":[]}
+omarillo_init__P6057.info = {"start":10847,"length":153,"line":371,"column":4,"endLine":376,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"init","argumentNames":[]}
 
-function turtle_init__P6057_mk(s) {
+function omarillo_init__P6057_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: turtle_init__P6057, depth: s.depth + 1,
+        parent: s, fn: omarillo_init__P6057, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3670,7 +3670,7 @@ function turtle_init__P6057_mk(s) {
 
 
 
-function turtle_home__P3610(s) {
+function omarillo_home__P3610(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3680,12 +3680,12 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = turtle_init__P6057_mk(s);
+    s.tmp_0 = omarillo_init__P6057_mk(s);
     s.callLocIdx = 108; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.tmp_0 = Turtle_home__P3587_mk(s);
-    s.tmp_0.arg0 = globals._turtle___6056;
+    s.tmp_0 = Omarillo_home__P3587_mk(s);
+    s.tmp_0.arg0 = globals._omarillo___6056;
     s.callLocIdx = 109; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
@@ -3693,12 +3693,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-turtle_home__P3610.info = {"start":16352,"length":74,"line":561,"column":4,"endLine":564,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"home","argumentNames":[]}
+omarillo_home__P3610.info = {"start":16352,"length":74,"line":561,"column":4,"endLine":564,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"home","argumentNames":[]}
 
-function turtle_home__P3610_mk(s) {
+function omarillo_home__P3610_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: turtle_home__P3610, depth: s.depth + 1,
+        parent: s, fn: omarillo_home__P3610, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -3707,7 +3707,7 @@ function turtle_home__P3610_mk(s) {
 
 
 
-function Turtle_home__P3587(s) {
+function Omarillo_home__P3587(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3722,8 +3722,8 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Turtle__C3567_VT)) failedCast(r0);
-    s.tmp_0 = Turtle_setPosition__P3588_mk(s);
+    if (!checkSubtype(r0, Omarillo__C3567_VT)) failedCast(r0);
+    s.tmp_0 = Omarillo_setPosition__P3588_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = 80;
     s.tmp_0.arg2 = 60;
@@ -3731,7 +3731,7 @@ switch (step) {
   case 1:
     r0 = s.retval;
     r0 = (s.arg0).fields["direction"] = (0);
-    s.tmp_0 = Turtle_turnDirectionByDegrees__P3583_mk(s);
+    s.tmp_0 = Omarillo_turnDirectionByDegrees__P3583_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = 0;
     s.tmp_0.arg2 = 0;
@@ -3742,12 +3742,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Turtle_home__P3587.info = {"start":7249,"length":148,"line":251,"column":4,"endLine":255,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"home","argumentNames":["this"]}
+Omarillo_home__P3587.info = {"start":7249,"length":148,"line":251,"column":4,"endLine":255,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"home","argumentNames":["this"]}
 
-function Turtle_home__P3587_mk(s) {
+function Omarillo_home__P3587_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Turtle_home__P3587, depth: s.depth + 1,
+        parent: s, fn: Omarillo_home__P3587, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -3757,7 +3757,7 @@ function Turtle_home__P3587_mk(s) {
 
 
 
-function Turtle_turnDirectionByDegrees__P3583(s) {
+function Omarillo_turnDirectionByDegrees__P3583(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3774,7 +3774,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Turtle__C3567_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Omarillo__C3567_VT)) failedCast(r0);
     r0 = (s.arg1 == 1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
@@ -3822,12 +3822,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Turtle_turnDirectionByDegrees__P3583.info = {"start":5119,"length":456,"line":186,"column":4,"endLine":195,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"turnDirectionByDegrees","argumentNames":["this","direction","degrees"]}
+Omarillo_turnDirectionByDegrees__P3583.info = {"start":5119,"length":456,"line":186,"column":4,"endLine":195,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"turnDirectionByDegrees","argumentNames":["this","direction","degrees"]}
 
-function Turtle_turnDirectionByDegrees__P3583_mk(s) {
+function Omarillo_turnDirectionByDegrees__P3583_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Turtle_turnDirectionByDegrees__P3583, depth: s.depth + 1,
+        parent: s, fn: Omarillo_turnDirectionByDegrees__P3583, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3843,7 +3843,7 @@ function Turtle_turnDirectionByDegrees__P3583_mk(s) {
 
 
 
-function Turtle_setPosition__P3588(s) {
+function Omarillo_setPosition__P3588(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3860,8 +3860,8 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Turtle__C3567_VT)) failedCast(r0);
-    s.tmp_0 = Turtle_x__P3576_mk(s);
+    if (!checkSubtype(r0, Omarillo__C3567_VT)) failedCast(r0);
+    s.tmp_0 = Omarillo_x__P3576_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_1 = r0 = s.arg1;
     r0 = pxsim_ImageMethods.width(globals.screen___1815);
@@ -3871,7 +3871,7 @@ switch (step) {
     s.callLocIdx = 87; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    s.tmp_2 = Turtle_x__P3575_mk(s);
+    s.tmp_2 = Omarillo_x__P3575_mk(s);
     s.tmp_2.arg0 = s.arg0;
     s.callLocIdx = 88; s.pc = 6; return s.tmp_2;
   case 6:
@@ -3881,10 +3881,10 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_3 = Turtle_x__P3576_mk(s);
+    s.tmp_3 = Omarillo_x__P3576_mk(s);
     s.tmp_4 = r0 = s.arg0;
     s.tmp_3.arg0 = r0;
-    s.tmp_6 = Turtle_x__P3575_mk(s);
+    s.tmp_6 = Omarillo_x__P3575_mk(s);
     s.tmp_6.arg0 = s.tmp_4;
     s.callLocIdx = 89; s.pc = 8; return s.tmp_6;
   case 8:
@@ -3899,7 +3899,7 @@ switch (step) {
     r0 = s.retval;
   case 1:
   case 2:
-    s.tmp_0 = Turtle_y__P3578_mk(s);
+    s.tmp_0 = Omarillo_y__P3578_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_1 = r0 = s.arg2;
     r0 = pxsim_ImageMethods.height(globals.screen___1815);
@@ -3909,7 +3909,7 @@ switch (step) {
     s.callLocIdx = 91; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
-    s.tmp_2 = Turtle_y__P3577_mk(s);
+    s.tmp_2 = Omarillo_y__P3577_mk(s);
     s.tmp_2.arg0 = s.arg0;
     s.callLocIdx = 92; s.pc = 10; return s.tmp_2;
   case 10:
@@ -3919,10 +3919,10 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    s.tmp_3 = Turtle_y__P3578_mk(s);
+    s.tmp_3 = Omarillo_y__P3578_mk(s);
     s.tmp_4 = r0 = s.arg0;
     s.tmp_3.arg0 = r0;
-    s.tmp_6 = Turtle_y__P3577_mk(s);
+    s.tmp_6 = Omarillo_y__P3577_mk(s);
     s.tmp_6.arg0 = s.tmp_4;
     s.callLocIdx = 93; s.pc = 12; return s.tmp_6;
   case 12:
@@ -3941,12 +3941,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Turtle_setPosition__P3588.info = {"start":7822,"length":243,"line":268,"column":4,"endLine":275,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"setPosition","argumentNames":["this","x","y"]}
+Omarillo_setPosition__P3588.info = {"start":7822,"length":243,"line":268,"column":4,"endLine":275,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"setPosition","argumentNames":["this","x","y"]}
 
-function Turtle_setPosition__P3588_mk(s) {
+function Omarillo_setPosition__P3588_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Turtle_setPosition__P3588, depth: s.depth + 1,
+        parent: s, fn: Omarillo_setPosition__P3588, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3965,7 +3965,7 @@ function Turtle_setPosition__P3588_mk(s) {
 
 
 
-function Turtle_y__P3578(s) {
+function Omarillo_y__P3578(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -3981,7 +3981,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Turtle__C3567_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Omarillo__C3567_VT)) failedCast(r0);
     s.tmp_0 = Sprite_y__P2048_mk(s);
     r0 = s.arg0.fields["sprite"];
     s.tmp_0.arg0 = r0;
@@ -3993,12 +3993,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Turtle_y__P3578.info = {"start":1588,"length":59,"line":76,"column":4,"endLine":78,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"y","argumentNames":["this","value"]}
+Omarillo_y__P3578.info = {"start":1588,"length":59,"line":76,"column":4,"endLine":78,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"y","argumentNames":["this","value"]}
 
-function Turtle_y__P3578_mk(s) {
+function Omarillo_y__P3578_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Turtle_y__P3578, depth: s.depth + 1,
+        parent: s, fn: Omarillo_y__P3578, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -4289,7 +4289,7 @@ function Sprite_y__P2047_mk(s) {
 
 
 
-function Turtle_y__P3577(s) {
+function Omarillo_y__P3577(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4304,7 +4304,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Turtle__C3567_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Omarillo__C3567_VT)) failedCast(r0);
     s.tmp_0 = Sprite_y__P2047_mk(s);
     r0 = s.arg0.fields["sprite"];
     s.tmp_0.arg0 = r0;
@@ -4314,13 +4314,13 @@ switch (step) {
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-Turtle_y__P3577.info = {"start":1537,"length":45,"line":72,"column":4,"endLine":74,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"y","argumentNames":["this"]}
-Turtle_y__P3577.isGetter = true;
+Omarillo_y__P3577.info = {"start":1537,"length":45,"line":72,"column":4,"endLine":74,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"y","argumentNames":["this"]}
+Omarillo_y__P3577.isGetter = true;
 
-function Turtle_y__P3577_mk(s) {
+function Omarillo_y__P3577_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Turtle_y__P3577, depth: s.depth + 1,
+        parent: s, fn: Omarillo_y__P3577, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -4330,7 +4330,7 @@ function Turtle_y__P3577_mk(s) {
 
 
 
-function Turtle_x__P3576(s) {
+function Omarillo_x__P3576(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4346,7 +4346,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Turtle__C3567_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Omarillo__C3567_VT)) failedCast(r0);
     s.tmp_0 = Sprite_x__P2046_mk(s);
     r0 = s.arg0.fields["sprite"];
     s.tmp_0.arg0 = r0;
@@ -4358,12 +4358,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Turtle_x__P3576.info = {"start":1392,"length":59,"line":65,"column":4,"endLine":67,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"x","argumentNames":["this","value"]}
+Omarillo_x__P3576.info = {"start":1392,"length":59,"line":65,"column":4,"endLine":67,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"x","argumentNames":["this","value"]}
 
-function Turtle_x__P3576_mk(s) {
+function Omarillo_x__P3576_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Turtle_x__P3576, depth: s.depth + 1,
+        parent: s, fn: Omarillo_x__P3576, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -4582,7 +4582,7 @@ function Sprite_x__P2045_mk(s) {
 
 
 
-function Turtle_x__P3575(s) {
+function Omarillo_x__P3575(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4597,7 +4597,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Turtle__C3567_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Omarillo__C3567_VT)) failedCast(r0);
     s.tmp_0 = Sprite_x__P2045_mk(s);
     r0 = s.arg0.fields["sprite"];
     s.tmp_0.arg0 = r0;
@@ -4607,13 +4607,13 @@ switch (step) {
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-Turtle_x__P3575.info = {"start":1341,"length":45,"line":61,"column":4,"endLine":63,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"x","argumentNames":["this"]}
-Turtle_x__P3575.isGetter = true;
+Omarillo_x__P3575.info = {"start":1341,"length":45,"line":61,"column":4,"endLine":63,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"x","argumentNames":["this"]}
+Omarillo_x__P3575.isGetter = true;
 
-function Turtle_x__P3575_mk(s) {
+function Omarillo_x__P3575_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Turtle_x__P3575, depth: s.depth + 1,
+        parent: s, fn: Omarillo_x__P3575, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -6259,7 +6259,7 @@ function helpers_arrayForEach__P108_mk(s) {
 
 
 
-function turtle_fromSprite__P3614(s) {
+function omarillo_fromSprite__P3614(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6269,7 +6269,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.turtle___6192 = undefined;
+    s.omarillo___6192 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
@@ -6281,19 +6281,19 @@ switch (step) {
     r0 = s.retval;
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_0, globals.DATA_KEY___3593);
-    s.turtle___6192 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.turtle___6192);
+    s.omarillo___6192 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.omarillo___6192);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = pxsim_pxtcore_mkClassInstance(Turtle__C3567_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(Omarillo__C3567_VT);
     s.tmp_2 = r0;
-    s.tmp_3 = Turtle_constructor__P3574_mk(s);
+    s.tmp_3 = Omarillo_constructor__P3574_mk(s);
     s.tmp_3.arg0 = s.tmp_2;
     s.tmp_3.arg1 = s.arg0;
-    s.tmp_4 = turtle_bkg__P6046_mk(s);
+    s.tmp_4 = omarillo_bkg__P6046_mk(s);
     s.callLocIdx = 115; s.pc = 5; return s.tmp_4;
   case 5:
     r0 = s.retval;
@@ -6301,26 +6301,26 @@ switch (step) {
     s.callLocIdx = 116; s.pc = 4; return s.tmp_3;
   case 4:
     r0 = s.retval;
-    s.turtle___6192 = (s.tmp_2);
+    s.omarillo___6192 = (s.tmp_2);
   case 1:
   case 2:
-    r0 = s.turtle___6192;
+    r0 = s.omarillo___6192;
     return leave(s, r0)
   default: oops()
 } } }
-turtle_fromSprite__P3614.info = {"start":18143,"length":201,"line":626,"column":4,"endLine":631,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"fromSprite","argumentNames":["sprite"]}
+omarillo_fromSprite__P3614.info = {"start":18143,"length":201,"line":626,"column":4,"endLine":631,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"fromSprite","argumentNames":["sprite"]}
 
-function turtle_fromSprite__P3614_mk(s) {
+function omarillo_fromSprite__P3614_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: turtle_fromSprite__P3614, depth: s.depth + 1,
+        parent: s, fn: omarillo_fromSprite__P3614, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  turtle___6192: undefined,
+  omarillo___6192: undefined,
   arg0: undefined,
 } }
 
@@ -6328,7 +6328,7 @@ function turtle_fromSprite__P3614_mk(s) {
 
 
 
-function turtle_bkg__P6046(s) {
+function omarillo_bkg__P6046(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6356,12 +6356,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-turtle_bkg__P6046.info = {"start":10651,"length":165,"line":362,"column":4,"endLine":368,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"bkg","argumentNames":[]}
+omarillo_bkg__P6046.info = {"start":10651,"length":165,"line":362,"column":4,"endLine":368,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"bkg","argumentNames":[]}
 
-function turtle_bkg__P6046_mk(s) {
+function omarillo_bkg__P6046_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: turtle_bkg__P6046, depth: s.depth + 1,
+        parent: s, fn: omarillo_bkg__P6046, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -6472,7 +6472,7 @@ function scene_Background_image__P2295_mk(s) {
 
 
 
-function Turtle_constructor__P3574(s) {
+function Omarillo_constructor__P3574(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6489,7 +6489,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Turtle__C3567_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Omarillo__C3567_VT)) failedCast(r0);
     r0 = (s.arg0).fields["color"] = (1);
     r0 = (s.arg0).fields["direction"] = (0);
     r0 = (s.arg0).fields["penMode"] = (0);
@@ -6508,12 +6508,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Turtle_constructor__P3574.info = {"start":1102,"length":151,"line":52,"column":4,"endLine":56,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"inline","argumentNames":["this","sprite","bkg"]}
+Omarillo_constructor__P3574.info = {"start":1102,"length":151,"line":52,"column":4,"endLine":56,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"inline","argumentNames":["this","sprite","bkg"]}
 
-function Turtle_constructor__P3574_mk(s) {
+function Omarillo_constructor__P3574_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Turtle_constructor__P3574, depth: s.depth + 1,
+        parent: s, fn: Omarillo_constructor__P3574, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -6580,7 +6580,7 @@ function Sprite_data__P2061_mk(s) {
 
 
 
-function turtle_moveTurtleDirection__P3604(s) {
+function omarillo_moveOmarilloDirection__P3604(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6595,7 +6595,7 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = turtle_init__P6057_mk(s);
+    s.tmp_0 = omarillo_init__P6057_mk(s);
     s.callLocIdx = 101; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
@@ -6603,16 +6603,16 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_1 = Turtle_forward__P3579_mk(s);
-    s.tmp_1.arg0 = globals._turtle___6056;
+    s.tmp_1 = Omarillo_forward__P3579_mk(s);
+    s.tmp_1.arg0 = globals._omarillo___6056;
     s.tmp_1.arg1 = s.arg1;
     s.callLocIdx = 102; s.pc = 4; return s.tmp_1;
   case 4:
     r0 = s.retval;
     { step = 2; continue; }
   case 1:
-    s.tmp_0 = Turtle_forward__P3579_mk(s);
-    s.tmp_0.arg0 = globals._turtle___6056;
+    s.tmp_0 = Omarillo_forward__P3579_mk(s);
+    s.tmp_0.arg0 = globals._omarillo___6056;
     r0 = (0 - s.arg1);
     s.tmp_0.arg1 = r0;
     s.callLocIdx = 103; s.pc = 5; return s.tmp_0;
@@ -6623,12 +6623,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-turtle_moveTurtleDirection__P3604.info = {"start":13516,"length":260,"line":466,"column":4,"endLine":473,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"moveTurtleDirection","argumentNames":["direction","steps"]}
+omarillo_moveOmarilloDirection__P3604.info = {"start":13516,"length":260,"line":466,"column":4,"endLine":473,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"moveOmarilloDirection","argumentNames":["direction","steps"]}
 
-function turtle_moveTurtleDirection__P3604_mk(s) {
+function omarillo_moveOmarilloDirection__P3604_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: turtle_moveTurtleDirection__P3604, depth: s.depth + 1,
+        parent: s, fn: omarillo_moveOmarilloDirection__P3604, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -6640,7 +6640,7 @@ function turtle_moveTurtleDirection__P3604_mk(s) {
 
 
 
-function Turtle_forward__P3579(s) {
+function Omarillo_forward__P3579(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -6667,7 +6667,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Turtle__C3567_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Omarillo__C3567_VT)) failedCast(r0);
     r0 = pxsim_numops_toBoolDecr(s.arg1);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
@@ -6717,13 +6717,13 @@ switch (step) {
     // jmp value (already in r0)
     s.tmp_2 = r0;
     s.c___5763 = (s.tmp_2);
-    s.tmp_0 = Turtle_x__P3575_mk(s);
+    s.tmp_0 = Omarillo_x__P3575_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 67; s.pc = 20; return s.tmp_0;
   case 20:
     r0 = s.retval;
     s.firstX___5771 = (r0);
-    s.tmp_0 = Turtle_y__P3577_mk(s);
+    s.tmp_0 = Omarillo_y__P3577_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 68; s.pc = 21; return s.tmp_0;
   case 21:
@@ -6765,13 +6765,13 @@ switch (step) {
     s.tmp_5.arg0 = r0;
     s.tmp_5.arg1 = s.oldX___5775;
     s.tmp_5.arg2 = s.oldY___5777;
-    s.tmp_6 = Turtle_x__P3575_mk(s);
+    s.tmp_6 = Omarillo_x__P3575_mk(s);
     s.tmp_6.arg0 = s.arg0;
     s.callLocIdx = 69; s.pc = 23; return s.tmp_6;
   case 23:
     r0 = s.retval;
     s.tmp_5.arg3 = r0;
-    s.tmp_7 = Turtle_y__P3577_mk(s);
+    s.tmp_7 = Omarillo_y__P3577_mk(s);
     s.tmp_7.arg0 = s.arg0;
     s.callLocIdx = 70; s.pc = 24; return s.tmp_7;
   case 24:
@@ -6783,9 +6783,9 @@ switch (step) {
     r0 = s.retval;
   case 8:
   case 9:
-    s.tmp_0 = Turtle_setPosition__P3588_mk(s);
+    s.tmp_0 = Omarillo_setPosition__P3588_mk(s);
     s.tmp_0.arg0 = s.arg0;
-    s.tmp_2 = Turtle_x__P3575_mk(s);
+    s.tmp_2 = Omarillo_x__P3575_mk(s);
     s.tmp_2.arg0 = s.arg0;
     s.callLocIdx = 72; s.pc = 26; return s.tmp_2;
   case 26:
@@ -6793,7 +6793,7 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = (s.tmp_1 + s.dx___5746);
     s.tmp_0.arg1 = r0;
-    s.tmp_4 = Turtle_y__P3577_mk(s);
+    s.tmp_4 = Omarillo_y__P3577_mk(s);
     s.tmp_4.arg0 = s.arg0;
     s.callLocIdx = 73; s.pc = 27; return s.tmp_4;
   case 27:
@@ -6810,13 +6810,13 @@ switch (step) {
     s.callLocIdx = 75; s.pc = 28; return s.tmp_0;
   case 28:
     r0 = s.retval;
-    s.tmp_0 = Turtle_x__P3575_mk(s);
+    s.tmp_0 = Omarillo_x__P3575_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 76; s.pc = 29; return s.tmp_0;
   case 29:
     r0 = s.retval;
     s.oldX___5775 = (r0);
-    s.tmp_0 = Turtle_y__P3577_mk(s);
+    s.tmp_0 = Omarillo_y__P3577_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 77; s.pc = 30; return s.tmp_0;
   case 30:
@@ -6828,7 +6828,7 @@ switch (step) {
   case 10:
   case 11:
   case 12:
-    s.tmp_0 = Turtle_setPosition__P3588_mk(s);
+    s.tmp_0 = Omarillo_setPosition__P3588_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_2 = r0 = s.firstX___5771;
     r0 = (s.dx___5746 * s.n___5759);
@@ -6869,13 +6869,13 @@ switch (step) {
     s.tmp_4.arg0 = r0;
     s.tmp_4.arg1 = s.oldX___5775;
     s.tmp_4.arg2 = s.oldY___5777;
-    s.tmp_5 = Turtle_x__P3575_mk(s);
+    s.tmp_5 = Omarillo_x__P3575_mk(s);
     s.tmp_5.arg0 = s.arg0;
     s.callLocIdx = 79; s.pc = 33; return s.tmp_5;
   case 33:
     r0 = s.retval;
     s.tmp_4.arg3 = r0;
-    s.tmp_6 = Turtle_y__P3577_mk(s);
+    s.tmp_6 = Omarillo_y__P3577_mk(s);
     s.tmp_6.arg0 = s.arg0;
     s.callLocIdx = 80; s.pc = 34; return s.tmp_6;
   case 34:
@@ -6898,12 +6898,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Turtle_forward__P3579.info = {"start":2021,"length":1355,"line":90,"column":4,"endLine":128,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"forward","argumentNames":["this","steps"]}
+Omarillo_forward__P3579.info = {"start":2021,"length":1355,"line":90,"column":4,"endLine":128,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"forward","argumentNames":["this","steps"]}
 
-function Turtle_forward__P3579_mk(s) {
+function Omarillo_forward__P3579_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Turtle_forward__P3579, depth: s.depth + 1,
+        parent: s, fn: Omarillo_forward__P3579, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -7106,7 +7106,7 @@ function Math_clamp__P125_mk(s) {
 
 
 
-function turtle_setSpeed__P3613(s) {
+function omarillo_setSpeed__P3613(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7120,12 +7120,12 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = turtle_init__P6057_mk(s);
+    s.tmp_0 = omarillo_init__P6057_mk(s);
     s.callLocIdx = 112; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.tmp_0 = Turtle_setSpeed__P3591_mk(s);
-    s.tmp_0.arg0 = globals._turtle___6056;
+    s.tmp_0 = Omarillo_setSpeed__P3591_mk(s);
+    s.tmp_0.arg0 = globals._omarillo___6056;
     s.tmp_0.arg1 = s.arg0;
     s.callLocIdx = 113; s.pc = 2; return s.tmp_0;
   case 2:
@@ -7134,12 +7134,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-turtle_setSpeed__P3613.info = {"start":17756,"length":101,"line":613,"column":4,"endLine":616,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"setSpeed","argumentNames":["speed"]}
+omarillo_setSpeed__P3613.info = {"start":17756,"length":101,"line":613,"column":4,"endLine":616,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"setSpeed","argumentNames":["speed"]}
 
-function turtle_setSpeed__P3613_mk(s) {
+function omarillo_setSpeed__P3613_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: turtle_setSpeed__P3613, depth: s.depth + 1,
+        parent: s, fn: omarillo_setSpeed__P3613, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -7149,7 +7149,7 @@ function turtle_setSpeed__P3613_mk(s) {
 
 
 
-function Turtle_setSpeed__P3591(s) {
+function Omarillo_setSpeed__P3591(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7165,7 +7165,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, Turtle__C3567_VT)) failedCast(r0);
+    if (!checkSubtype(r0, Omarillo__C3567_VT)) failedCast(r0);
     s.tmp_0 = r0 = s.arg0;
     s.tmp_3 = Math_clamp__P125_mk(s);
     s.tmp_3.arg0 = 1;
@@ -7183,12 +7183,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-Turtle_setSpeed__P3591.info = {"start":9608,"length":95,"line":327,"column":4,"endLine":329,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"setSpeed","argumentNames":["this","speed"]}
+Omarillo_setSpeed__P3591.info = {"start":9608,"length":95,"line":327,"column":4,"endLine":329,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"setSpeed","argumentNames":["this","speed"]}
 
-function Turtle_setSpeed__P3591_mk(s) {
+function Omarillo_setSpeed__P3591_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: Turtle_setSpeed__P3591, depth: s.depth + 1,
+        parent: s, fn: Omarillo_setSpeed__P3591, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -7202,7 +7202,7 @@ function Turtle_setSpeed__P3591_mk(s) {
 
 
 
-function turtle_setPositionCartesian__P3611(s) {
+function omarillo_setPositionCartesian__P3611(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7217,7 +7217,7 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = turtle_init__P6057_mk(s);
+    s.tmp_0 = omarillo_init__P6057_mk(s);
     s.callLocIdx = 110; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
@@ -7239,8 +7239,8 @@ switch (step) {
     s.arg0 = (159);
   case 3:
   case 4:
-    s.tmp_0 = Turtle_setPosition__P3588_mk(s);
-    s.tmp_0.arg0 = globals._turtle___6056;
+    s.tmp_0 = Omarillo_setPosition__P3588_mk(s);
+    s.tmp_0.arg0 = globals._omarillo___6056;
     s.tmp_0.arg1 = s.arg0;
     s.tmp_0.arg2 = s.arg1;
     s.callLocIdx = 111; s.pc = 6; return s.tmp_0;
@@ -7250,12 +7250,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-turtle_setPositionCartesian__P3611.info = {"start":16864,"length":306,"line":576,"column":4,"endLine":590,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"setPositionCartesian","argumentNames":["x","y"]}
+omarillo_setPositionCartesian__P3611.info = {"start":16864,"length":306,"line":576,"column":4,"endLine":590,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"setPositionCartesian","argumentNames":["x","y"]}
 
-function turtle_setPositionCartesian__P3611_mk(s) {
+function omarillo_setPositionCartesian__P3611_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: turtle_setPositionCartesian__P3611, depth: s.depth + 1,
+        parent: s, fn: omarillo_setPositionCartesian__P3611, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -7266,7 +7266,7 @@ function turtle_setPositionCartesian__P3611_mk(s) {
 
 
 
-function turtle_showTurtle__P3603(s) {
+function omarillo_showOmarillo__P3603(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7276,7 +7276,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = turtle_init__P6057_mk(s);
+    s.tmp_0 = omarillo_init__P6057_mk(s);
     s.callLocIdx = 100; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
@@ -7284,12 +7284,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-turtle_showTurtle__P3603.info = {"start":13058,"length":58,"line":451,"column":4,"endLine":453,"endColumn":5,"fileName":"turtle_logo.ts","functionName":"showTurtle","argumentNames":[]}
+omarillo_showOmarillo__P3603.info = {"start":13058,"length":58,"line":451,"column":4,"endLine":453,"endColumn":5,"fileName":"omarillo_logo.ts","functionName":"showOmarillo","argumentNames":[]}
 
-function turtle_showTurtle__P3603_mk(s) {
+function omarillo_showOmarillo__P3603_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: turtle_showTurtle__P3603, depth: s.depth + 1,
+        parent: s, fn: omarillo_showOmarillo__P3603, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -38378,7 +38378,7 @@ switch (step) {
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-transformSprites_SpriteWithRotation_id__P6209.info = {"start":19616,"length":63,"line":669,"column":8,"endLine":671,"endColumn":9,"fileName":"turtle_logo.ts","functionName":"id","argumentNames":["this"]}
+transformSprites_SpriteWithRotation_id__P6209.info = {"start":19616,"length":63,"line":669,"column":8,"endLine":671,"endColumn":9,"fileName":"omarillo_logo.ts","functionName":"id","argumentNames":["this"]}
 transformSprites_SpriteWithRotation_id__P6209.isGetter = true;
 
 function transformSprites_SpriteWithRotation_id__P6209_mk(s) {
@@ -40848,8 +40848,8 @@ const texteffects_TextEffect__C2848_VT = mkVTable({
     "set/getState": null,
   },
 });
-const Turtle__C3567_VT = mkVTable({
-  name: "Turtle",
+const Omarillo__C3567_VT = mkVTable({
+  name: "Omarillo",
   numFields: 6,
   classNo: 20,
   lastSubtypeNo: 20,
@@ -40869,16 +40869,16 @@ const Turtle__C3567_VT = mkVTable({
     "set/sprite": null,
     "bkg": null,
     "set/bkg": null,
-    "x": Turtle_x__P3575,
-    "set/x": Turtle_x__P3576,
-    "y": Turtle_y__P3577,
-    "set/y": Turtle_y__P3578,
-    "forward": Turtle_forward__P3579,
-    "turn": Turtle_turn__P3581,
-    "turnDirectionByDegrees": Turtle_turnDirectionByDegrees__P3583,
-    "home": Turtle_home__P3587,
-    "setPosition": Turtle_setPosition__P3588,
-    "setSpeed": Turtle_setSpeed__P3591,
+    "x": Omarillo_x__P3575,
+    "set/x": Omarillo_x__P3576,
+    "y": Omarillo_y__P3577,
+    "set/y": Omarillo_y__P3578,
+    "forward": Omarillo_forward__P3579,
+    "turn": Omarillo_turn__P3581,
+    "turnDirectionByDegrees": Omarillo_turnDirectionByDegrees__P3583,
+    "home": Omarillo_home__P3587,
+    "setPosition": Omarillo_setPosition__P3588,
+    "setSpeed": Omarillo_setSpeed__P3591,
   },
 });
 const transformSprites_SpriteWithRotation__C6208_VT = mkVTable({
@@ -42045,7 +42045,7 @@ const sprites_StaticObstacle__C2168_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["turtleImage___3595","_turtle___6056","_spritesWithRotations___6206","DATA_KEY___3593","_bkg___6045","backgroundColor___3596"])
+const breakpoints = setupDebugger(1, ["omarilloImage___3595","_omarillo___6056","_spritesWithRotations___6206","DATA_KEY___3593","_bkg___6045","backgroundColor___3596"])
 
 return _main___P18580
 })

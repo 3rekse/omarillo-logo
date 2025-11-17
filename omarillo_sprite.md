@@ -1,10 +1,7 @@
-// Auto-generated code. Do not edit.
-namespace myImages {
+# Omarillo Sprite
 
-    helpers._registerFactory("image", function(name: string) {
-        switch(helpers.stringTrim(name)) {
-            case "image1":
-            case "omarilloImage":return img`
+Here is the code to make the omarillo sprite:
+let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -21,17 +18,4 @@ namespace myImages {
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
-`;
-        }
-        return null;
-    })
-
-    helpers._registerFactory("animation", function(name: string) {
-        switch(helpers.stringTrim(name)) {
-
-        }
-        return null;
-    })
-
-}
-// Auto-generated code. Do not edit.
+    `, SpriteKind.Player)

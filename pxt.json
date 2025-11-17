@@ -1,5 +1,5 @@
 {
-    "name": "Turtle Logo",
+    "name": "Omarillo Logo",
     "version": "1.0.0",
     "description": "",
     "dependencies": {
@@ -8,7 +8,7 @@
     "files": [
         "README.md",
         "assets.json",
-        "turtle_logo.ts",
+        "omarillo_logo.ts",
         "tutorial-info-cache.json",
         "images.g.jres",
         "images.g.ts"

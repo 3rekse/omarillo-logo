@@ -1,7 +1,7 @@
-turtle.showTurtle()
-turtle.setPositionCartesian(-40, 20)
-turtle.setSpeed(98)
+omarillo.showOmarillo()
+omarillo.setPositionCartesian(-40, 20)
+omarillo.setSpeed(98)
 for (let index = 0; index < 40; index++) {
-    turtle.moveTurtleDirection(TurtleDirection.Forward, 75)
-    turtle.turnTurtleDirectionByDegrees(TurtleTurnDirection.Right, 130)
+    omarillo.moveOmarilloDirection(OmarilloDirection.Forward, 75)
+    omarillo.turnOmarilloDirectionByDegrees(OmarilloTurnDirection.Right, 130)
 }

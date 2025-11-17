@@ -1,0 +1,27 @@
+{
+  "name": "omarillo-logo",
+  "version": "1.0.0",
+  "description": "![Omarillo Logo](https://raw.githubusercontent.com/mr-coxall/omarillo-logo/master/icon.png) ## Omarillo Logo Extension Overview",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3rekse/omarillo-logo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/3rekse/omarillo-logo/issues"
+  },
+  "homepage": "https://github.com/3rekse/omarillo-logo#readme",
+  "devDependencies": {
+    "pxt": "^0.5.1"
+  },
+  "dependencies": {
+    "pxt-arcade": "^2.1.18"
+  }
+}

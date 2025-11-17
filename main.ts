@@ -1,24 +1,24 @@
-let myTurtle2 = turtle.fromSprite(sprites.create(img`
+let myOmarillo2 = Omarillo.fromSprite(sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
+    . . . . . 8 8 8 . . . . . . . . 
+    . . . . 8 8 8 8 8 . . . . . . . 
+    . . 8 8 8 8 8 8 8 8 8 . . . . . 
+    . 8 8 8 8 6 6 6 8 8 8 8 . . . . 
+    . 8 8 6 6 6 6 6 6 6 8 8 8 8 8 8 
+    . 8 8 8 6 6 6 6 6 6 6 6 6 6 6 8 
+    . 8 8 8 8 6 6 6 8 8 8 8 8 8 8 8 
+    . . 8 8 8 8 8 8 8 8 8 . . . . . 
+    . . . . 8 8 8 8 8 . . . . . . . 
+    . . . . . 8 8 8 . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
-    . . . . . . e e . . 7 7 7 . . . 
-    . . . . . e e e e . 7 7 f 7 . . 
-    . . . . e e e d e e 7 7 7 7 . . 
-    . . . . e d e e d e 7 7 7 . . . 
-    . . . 7 e e e e e e . . . . . . 
-    . . . . 7 7 7 7 7 7 . . . . . . 
-    . . . . 7 7 . . 7 7 . . . . . . 
     . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player))
-myTurtle2.setPositionCartesian(-40, 20)
-myTurtle2.setSpeed(98)
+`, SpriteKind.Player))
+myOmarillo2.setPositionCartesian(-40, 20)
+myOmarillo2.setSpeed(98)
 for (let index = 0; index < 35; index++) {
-    myTurtle2.moveDirection(TurtleDirection.Forward, 75)
-    myTurtle2.turnDirectionByDegrees(TurtleTurnDirection.Right, 130)
+    myOmarillo2.moveDirection(OmarilloDirection.Forward, 75)
+    myOmarillo2.turnDirectionByDegrees(OmarilloTurnDirection.Right, 130)
 }
