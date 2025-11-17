@@ -340,12 +340,23 @@ namespace omarillo {
     export const DEG_TO_RAD =  Math.PI / 180;
 
     export let omarilloImage = img`
-    . . 2 2 2 . .
-    . 2 2 2 2 2 .
-    2 2 2 2 2 2 2
-    . 2 2 2 2 2 .
-    . . 2 2 2 . .
-    `;        
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . f f . . . . . . . . 
+    . . . . . f f f f . . . . . . . 
+    . . . . f f f f f f . . . . . . 
+    . . . f f f f f f f f . . . . . 
+    . . . f f f f f f f f . . . . . 
+    . . f f f f f f f f f f . . . . 
+    . . f f f f f f f f f f . . . . 
+    . . f f f f f f f f f f . . . . 
+    . f f . f f f f f f . f f . . . 
+    . f . . f f f f f f . . f . . . 
+    . . . . f . . . . f . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+`;        
     export let backgroundColor = 0xf;
 
     let _bkg: Image;
